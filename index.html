@@ -28,8 +28,15 @@
             <img src="lab1-1.gif" alt="lab1" height="100" width="100">
             
             <H6>Now there's a button</H6>
-            <button onclick="showPicture()"class= "button">Look a button</button>
-            <img style="display:none;" id ="lab1-1.gif" src="lab1-1.gif" alt="lab1" height="100" width="100">
+            <button onclick="displayPicture()"class= "button">Look a button</button>
+            <img style="display:none;" id ="lab-1Button" src="lab1-1.gif" alt="lab1" height="100" width="100">
+        
+        <script>
+        function displayPicture()
+        {
+            document.getElementById("lab-1Button").style = "display:block;"
+        }
+        </script>
         </body>        
     </span>
 </html>
