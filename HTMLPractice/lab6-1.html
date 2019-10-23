@@ -1,573 +1,463 @@
 <!DOCTYPE html>
 <html lang="">
+
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title></title>
-    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+
     <style>
-        div
-        {
+        div {
             width: 25px;
             height: 25px;
             border: 1px solid black;
-            float:left;
+            float: left;
         }
-        
-        .white
-        {
+
+        .white {
             background-color: white;
         }
-        
-        .yellow
-        {
+
+        .yellow {
             background-color: #FAD61D;
         }
-        
-        .black
-        {
+
+        .black {
             background-color: black;
         }
-        
-        .red
-        {
-            background-color:#F62D14;
-        }
-        
-        .first-div
-        {
-            clear:left;
+
+        .red {
+            background-color: #F62D14;
         }
 
-        
+        .first-div {
+            clear: left;
+        }
+
     </style>
-    
+
 </head>
-        
+
 <body>
-    
-    
-    
+
+
+
     <element id="container"></element>
     <script>
-        
-        
-        
-            var i;
-           var fDiv = document.createElement("div");
-            fDiv.setAttribute("class", "first-div");
-            document.getElementById("container").appendChild(fDiv.cloneNode(true));
-            for(i=0;i<29; i++){
-                var newDiv = document.createElement("div");
+        var i;
+        var fDiv = document.createElement("div");
+        fDiv.setAttribute("class", "first-div");
+        document.getElementById("container").appendChild(fDiv.cloneNode(true));
+        for (i = 0; i < 29; i++) {
+            var newDiv = document.createElement("div");
+            newDiv.setAttribute("class", "white");
+            document.getElementById("container").appendChild(newDiv.cloneNode(true));
+        }
+
+
+
+        var fDiv = document.createElement("div");
+        fDiv.setAttribute("class", "first-div");
+        document.getElementById("container").appendChild(fDiv.cloneNode(true));
+        for (i = 0; i < 29; i++) {
+            var newDiv = document.createElement("div");
+            if ((i == 0) || (i == 1) || (i == 26) || (i == 27)) {
+                newDiv.setAttribute("class", "black");
+            } else {
                 newDiv.setAttribute("class", "white");
-                document.getElementById("container").appendChild(newDiv.cloneNode(true));
             }
 
-            
+            document.getElementById("container").appendChild(newDiv.cloneNode(true));
+        }
 
-            var fDiv = document.createElement("div");
-            fDiv.setAttribute("class", "first-div");
-            document.getElementById("container").appendChild(fDiv.cloneNode(true));
-            for(i=0;i<29; i++){
-                var newDiv = document.createElement("div");
-                if((i == 0) || (i == 1) || (i == 26) || (i == 27))
-                {
-                    newDiv.setAttribute("class", "black");
-                }
-                else
-                {
-                        newDiv.setAttribute("class", "white");
-                }
-                    
-                document.getElementById("container").appendChild(newDiv.cloneNode(true));
-            }
-        
-            var fDiv = document.createElement("div");
-            fDiv.setAttribute("class", "first-div");
-            document.getElementById("container").appendChild(fDiv.cloneNode(true));
-            for(i=0;i<29; i++){
-                var newDiv = document.createElement("div");
-                if((i == 0) || (i == 1) || (i == 2) || (i == 3)  || (i == 24) || (i == 25) || (i == 26) || (i == 27))
-                {
-                    newDiv.setAttribute("class", "black");
-                }
-                else
-                {
-                        newDiv.setAttribute("class", "white");
-                }
-                    
-                document.getElementById("container").appendChild(newDiv.cloneNode(true));
-            }
-        
-            var fDiv = document.createElement("div");
-            fDiv.setAttribute("class", "first-div");
-            document.getElementById("container").appendChild(fDiv.cloneNode(true));
-            for(i=0;i<29; i++){
-                var newDiv = document.createElement("div");
-                if((i == 0) || (i == 1) || (i == 2)|| (i == 4)|| (i == 23) || (i == 25) || (i == 26) || (i == 27))
-                {
-                    newDiv.setAttribute("class", "black");
-                }else if((i==3) || (i==24))
-                   {
-                    newDiv.setAttribute("class", "yellow");
-                   }
-                else
-                {
-                        newDiv.setAttribute("class", "white");
-                }
-                    
-                document.getElementById("container").appendChild(newDiv.cloneNode(true));
-            }
-        
-            var fDiv = document.createElement("div");
-            fDiv.setAttribute("class", "first-div");
-            document.getElementById("container").appendChild(fDiv.cloneNode(true));
-            for(i=0;i<29; i++){
-                var newDiv = document.createElement("div");
-                if((i == 0) || (i == 1)|| (i == 5)|| (i == 21)|| (i == 22)|| (i == 6) || (i == 2)|| (i == 25) || (i == 26) || (i == 27))
-                {
-                    newDiv.setAttribute("class", "black");
-                }else if((i==3)||(i==4)||(i==24)||(i==23))
-                   {
-                    newDiv.setAttribute("class", "yellow");
-                   }
-                else
-                {
-                        newDiv.setAttribute("class", "white");
-                }
-                    
-                document.getElementById("container").appendChild(newDiv.cloneNode(true));
-            }
-        
-            var fDiv = document.createElement("div");
-            fDiv.setAttribute("class", "first-div");
-            document.getElementById("container").appendChild(fDiv.cloneNode(true));
-            for(i=0;i<29; i++){
-                var newDiv = document.createElement("div");
-                if((i == 1)||(i == 2)|| (i == 7)|| (i == 20) || (i == 25) || (i == 26))
-                {
-                    newDiv.setAttribute("class", "black");
-                }else if(i > 1 && i < 7 || (i >20 && i< 26))
-                   {
-                    newDiv.setAttribute("class", "yellow");
-                   }
-                else
-                {
-                        newDiv.setAttribute("class", "white");
-                }
-                    
-                document.getElementById("container").appendChild(newDiv.cloneNode(true));
-            }
-        
-            var fDiv = document.createElement("div");
-            fDiv.setAttribute("class", "first-div");
-            document.getElementById("container").appendChild(fDiv.cloneNode(true));
-            for(i=0;i<29; i++){
-                var newDiv = document.createElement("div");
-                if((i == 2) || (i == 1)|| (i == 8)|| (i == 9)|| (i == 13)|| (i == 14)|| (i == 15)|| (i == 12)|| (i == 18)|| (i == 19) || (i == 25) || (i == 26))
-                {
-                    newDiv.setAttribute("class", "black");
-                }
-                else if(i > 1 && i < 8 || (i >19 && i< 26))
-                   {
-                    newDiv.setAttribute("class", "yellow");
-                   }
-                else
-                {
-                        newDiv.setAttribute("class", "white");
-                }
-                    
-                document.getElementById("container").appendChild(newDiv.cloneNode(true));
-            }
-        
-        
-            var fDiv = document.createElement("div");
-            fDiv.setAttribute("class", "first-div");
-            document.getElementById("container").appendChild(fDiv.cloneNode(true));
-            for(i=0;i<29; i++){
-                var newDiv = document.createElement("div");
-                if((i == 2)|| (i == 10)|| (i == 11)|| (i == 17)|| (i == 16) || (i == 25))
-                {
-                    newDiv.setAttribute("class", "black");
-                }else if(i > 2 && i < 25)
-                   {
-                    newDiv.setAttribute("class", "yellow");
-                   }
-                else
-                {
-                        newDiv.setAttribute("class", "white");
-                }
-                    
-                document.getElementById("container").appendChild(newDiv.cloneNode(true));
-            }
-        
-            var fDiv = document.createElement("div");
-            fDiv.setAttribute("class", "first-div");
-            document.getElementById("container").appendChild(fDiv.cloneNode(true));
-            for(i=0;i<29; i++){
-                var newDiv = document.createElement("div");
-                if((i == 2) || (i == 25))
-                {
-                    newDiv.setAttribute("class", "black");
-                }
-                else if(i > 2 && i < 25)
-                   {
-                    newDiv.setAttribute("class", "yellow");
-                   }
-                else
-                {
-                        newDiv.setAttribute("class", "white");
-                }
-                    
-                document.getElementById("container").appendChild(newDiv.cloneNode(true));
-            }
-        
-            var fDiv = document.createElement("div");
-            fDiv.setAttribute("class", "first-div");
-            document.getElementById("container").appendChild(fDiv.cloneNode(true));
-            for(i=0;i<29; i++){
-                var newDiv = document.createElement("div");
-                if((i == 3) || (i == 24))
-                {
-                    newDiv.setAttribute("class", "black");
-                }else if(i > 3 && i < 24)
-                   {
-                    newDiv.setAttribute("class", "yellow");
-                   }
-                else
-                {
-                        newDiv.setAttribute("class", "white");
-                }
-                    
-                document.getElementById("container").appendChild(newDiv.cloneNode(true));
-            }
-        
-            var fDiv = document.createElement("div");
-            fDiv.setAttribute("class", "first-div");
-            document.getElementById("container").appendChild(fDiv.cloneNode(true));
-            for(i=0;i<29; i++){
-                var newDiv = document.createElement("div");
-                if((i == 4) || (i == 6) || (i == 22) || (i == 24))
-                {
-                    newDiv.setAttribute("class", "black");
-                }
-                else if(i > 4 && i < 24)
-                   {
-                    newDiv.setAttribute("class", "yellow");
-                   }
-                else
-                {
-                        newDiv.setAttribute("class", "white");
-                }
-                    
-                document.getElementById("container").appendChild(newDiv.cloneNode(true));
-            }
-        
-            var fDiv = document.createElement("div");
-            fDiv.setAttribute("class", "first-div");
-            document.getElementById("container").appendChild(fDiv.cloneNode(true));
-            for(i=0;i<29; i++){
-                var newDiv = document.createElement("div");
-                if((i == 5) || (i == 23))
-                {
-                    newDiv.setAttribute("class", "black");
-                }
-                else if(i > 5 && i < 23)
-                   {
-                    newDiv.setAttribute("class", "yellow");
-                   }else if(i > 5 && i < 22)
-                   {
-                    newDiv.setAttribute("class", "yellow");
-                   }
-                else
-                {
-                        newDiv.setAttribute("class", "white");
-                }
-                    
-                document.getElementById("container").appendChild(newDiv.cloneNode(true));
-            }
-        
-            var fDiv = document.createElement("div");
-            fDiv.setAttribute("class", "first-div");
-            document.getElementById("container").appendChild(fDiv.cloneNode(true));
-            for(i=0;i<29; i++){
-                var newDiv = document.createElement("div");
-                if((i == 5) || (i == 22))
-                {
-                    newDiv.setAttribute("class", "black");
-                }
-                else if(i > 5 && i < 22)
-                   {
-                    newDiv.setAttribute("class", "yellow");
-                   }
-                else
-                {
-                        newDiv.setAttribute("class", "white");
-                }
-                    
-                document.getElementById("container").appendChild(newDiv.cloneNode(true));
-            }
-        
-            var fDiv = document.createElement("div");
-            fDiv.setAttribute("class", "first-div");
-            document.getElementById("container").appendChild(fDiv.cloneNode(true));
-            for(i=0;i<29; i++){
-                var newDiv = document.createElement("div");
-                if((i == 4) || (i == 23)||(i == 9)||(i == 8)||(i == 19)||(i == 18))
-                {
-                    newDiv.setAttribute("class", "black");
-                }else if(i > 4 && i < 23)
-                   {
-                    newDiv.setAttribute("class", "yellow");
-                   }
-                else
-                {
-                        newDiv.setAttribute("class", "white");
-                }
-                    
-                document.getElementById("container").appendChild(newDiv.cloneNode(true));
-            }
-        
-            var fDiv = document.createElement("div");
-            fDiv.setAttribute("class", "first-div");
-            document.getElementById("container").appendChild(fDiv.cloneNode(true));
-            for(i=0;i<29; i++){
-                var newDiv = document.createElement("div");
-                if((i == 4) || (i == 23)||(i == 10)||(i == 9)||(i == 7)||(i == 18)||(i == 17)||(i == 20))
-                {
-                    newDiv.setAttribute("class", "black");
-                }else if(i > 4 && i < 23 && i != 8 & i != 19)
-                   {
-                    newDiv.setAttribute("class", "yellow");
-                   }
-                else
-                {
-                        newDiv.setAttribute("class", "white");
-                }
-                    
-                document.getElementById("container").appendChild(newDiv.cloneNode(true));
-            }
-        
-            var fDiv = document.createElement("div");
-            fDiv.setAttribute("class", "first-div");
-            document.getElementById("container").appendChild(fDiv.cloneNode(true));
-            for(i=0;i<29; i++){
-                var newDiv = document.createElement("div");
-                if((i == 4) || (i == 23)||(i == 10)||(i == 9)||(i == 8)||(i == 7)||(i == 19)||(i == 18)||(i == 17)||(i == 20))
-                {
-                    newDiv.setAttribute("class", "black");
-                }else if(i > 4 && i < 23)
-                   {
-                    newDiv.setAttribute("class", "yellow");
-                   }
-                else
-                {
-                        newDiv.setAttribute("class", "white");
-                }
-                    
-                document.getElementById("container").appendChild(newDiv.cloneNode(true));
-            }
-        
-            var fDiv = document.createElement("div");
-            fDiv.setAttribute("class", "first-div");
-            document.getElementById("container").appendChild(fDiv.cloneNode(true));
-            for(i=0;i<29; i++){
-                var newDiv = document.createElement("div");
-                if((i == 4)|| (i == 13)|| (i == 14)|| (i == 9)|| (i == 8)|| (i == 18)|| (i == 19) || (i == 23))
-                {
-                    newDiv.setAttribute("class", "black");
-                }else if(i > 4 && i < 23)
-                   {
-                    newDiv.setAttribute("class", "yellow");
-                   }
-                else
-                {
-                        newDiv.setAttribute("class", "white");
-                }
-                    
-                document.getElementById("container").appendChild(newDiv.cloneNode(true));
-            }
-        
-            var fDiv = document.createElement("div");
-            fDiv.setAttribute("class", "first-div");
-            document.getElementById("container").appendChild(fDiv.cloneNode(true));
-            for(i=0;i<29; i++){
-                var newDiv = document.createElement("div");
-                if((i == 3) || (i == 24))
-                {
-                    newDiv.setAttribute("class", "black");
-                }
-                else if(i > 3 && i < 24)
-                   {
-                    newDiv.setAttribute("class", "yellow");
-                   }
-                else
-                {
-                        newDiv.setAttribute("class", "white");
-                }
-                    
-                document.getElementById("container").appendChild(newDiv.cloneNode(true));
-            }
-        
-            var fDiv = document.createElement("div");
-            fDiv.setAttribute("class", "first-div");
-            document.getElementById("container").appendChild(fDiv.cloneNode(true));
-            for(i=0;i<29; i++){
-                var newDiv = document.createElement("div");
-                if((i == 3)|| (i == 13)|| (i == 14)|| (i == 11)|| (i == 16) || (i == 24))
-                {
-                    newDiv.setAttribute("class", "black");
-                }
-                else if(i > 3 && i < 24)
-                   {
-                    newDiv.setAttribute("class", "yellow");
-                   }
-                else
-                {
-                        newDiv.setAttribute("class", "white");
-                }
-                    
-                document.getElementById("container").appendChild(newDiv.cloneNode(true));
-            }
-        
-            var fDiv = document.createElement("div");
-            fDiv.setAttribute("class", "first-div");
-            document.getElementById("container").appendChild(fDiv.cloneNode(true));
-            for(i=0;i<29; i++){
-                var newDiv = document.createElement("div");
-                if((i == 15)|| (i == 12)|| (i == 13)|| (i == 14) ||(i == 3) || (i == 24))
-                {
-                    newDiv.setAttribute("class", "black");
-                }
-                else if(i > 3 && i < 24)
-                   {
-                    newDiv.setAttribute("class", "yellow");
-                   }
-                else
-                {
-                        newDiv.setAttribute("class", "white");
-                }
-                    
-                document.getElementById("container").appendChild(newDiv.cloneNode(true));
-            }
-        
-            var fDiv = document.createElement("div");
-            fDiv.setAttribute("class", "first-div");
-            document.getElementById("container").appendChild(fDiv.cloneNode(true));
-            for(i=0;i<29; i++){
-                var newDiv = document.createElement("div");
-                if((i == 4)|| (i == 12)||(i == 15)||  (i == 23))
-                {
-                    newDiv.setAttribute("class", "black");
-                }else if(i > 4 && i < 23)
-                   {
-                    newDiv.setAttribute("class", "yellow");
-                   }
-                else
-                {
-                        newDiv.setAttribute("class", "white");
-                }
-                    
-                document.getElementById("container").appendChild(newDiv.cloneNode(true));
-            }
-        
-            var fDiv = document.createElement("div");
-            fDiv.setAttribute("class", "first-div");
-            document.getElementById("container").appendChild(fDiv.cloneNode(true));
-            for(i=0;i<29; i++){
-                var newDiv = document.createElement("div");
-                if((i == 5)|| (i == 12)|| (i == 15) || (i == 22))
-                {
-                    newDiv.setAttribute("class", "black");
-                }else if(i > 5 && i < 22)
-                   {
-                    newDiv.setAttribute("class", "yellow");
-                   }
-                else
-                {
-                        newDiv.setAttribute("class", "white");
-                }
-                    
-                document.getElementById("container").appendChild(newDiv.cloneNode(true));
-            }
-        
-            var fDiv = document.createElement("div");
-            fDiv.setAttribute("class", "first-div");
-            document.getElementById("container").appendChild(fDiv.cloneNode(true));
-            for(i=0;i<29; i++){
-                var newDiv = document.createElement("div");
-                if((i == 6) || (i == 7)|| (i == 13)|| (i == 14) || (i == 20) || (i == 21))
-                {
-                    newDiv.setAttribute("class", "black");
-                }
-                else if(i > 7 && i < 20)
-                   {
-                    newDiv.setAttribute("class", "yellow");
-                   }
-                else
-                {
-                        newDiv.setAttribute("class", "white");
-                }
-                    
-                document.getElementById("container").appendChild(newDiv.cloneNode(true));
-            }
-        
-            var fDiv = document.createElement("div");
-            fDiv.setAttribute("class", "first-div");
-            document.getElementById("container").appendChild(fDiv.cloneNode(true));
-            for(i=0;i<29; i++){
-                var newDiv = document.createElement("div");
-                if((i == 8) || (i == 9) || (i == 10) || (i == 17) || (i == 18) || (i == 19))
-                {
-                    newDiv.setAttribute("class", "black");
-                }
-                else if(i > 10 && i < 17)
-                   {
-                    newDiv.setAttribute("class", "yellow");
-                   }
-                else
-                {
-                        newDiv.setAttribute("class", "white");
-                }
-                    
-                document.getElementById("container").appendChild(newDiv.cloneNode(true));
-            }
-        
-            var fDiv = document.createElement("div");
-            fDiv.setAttribute("class", "first-div");
-            document.getElementById("container").appendChild(fDiv.cloneNode(true));
-            for(i=0;i<29; i++){
-                var newDiv = document.createElement("div");
-                if((i == 11) || (i == 12) || (i == 13) || (i == 14) || (i == 15) || (i == 16))
-                {
-                    newDiv.setAttribute("class", "black");
-                }
-                else
-                {
-                        newDiv.setAttribute("class", "white");
-                }
-                    
-                document.getElementById("container").appendChild(newDiv.cloneNode(true));
-            }
-        
-            var fDiv = document.createElement("div");
-            fDiv.setAttribute("class", "first-div");
-            document.getElementById("container").appendChild(fDiv.cloneNode(true));
-            for(i=0;i<29; i++){
-                var newDiv = document.createElement("div");
+        var fDiv = document.createElement("div");
+        fDiv.setAttribute("class", "first-div");
+        document.getElementById("container").appendChild(fDiv.cloneNode(true));
+        for (i = 0; i < 29; i++) {
+            var newDiv = document.createElement("div");
+            if ((i == 0) || (i == 1) || (i == 2) || (i == 3) || (i == 24) || (i == 25) || (i == 26) || (i == 27)) {
+                newDiv.setAttribute("class", "black");
+            } else {
                 newDiv.setAttribute("class", "white");
-                document.getElementById("container").appendChild(newDiv.cloneNode(true));
             }
-        
 
-        /* else if()
-                   {
-                    newDiv.setAttribute("class", "red");
-                   }*/
-        
-        
+            document.getElementById("container").appendChild(newDiv.cloneNode(true));
+        }
+
+        var fDiv = document.createElement("div");
+        fDiv.setAttribute("class", "first-div");
+        document.getElementById("container").appendChild(fDiv.cloneNode(true));
+        for (i = 0; i < 29; i++) {
+            var newDiv = document.createElement("div");
+            if ((i == 0) || (i == 1) || (i == 2) || (i == 4) || (i == 23) || (i == 25) || (i == 26) || (i == 27)) {
+                newDiv.setAttribute("class", "black");
+            } else if ((i == 3) || (i == 24)) {
+                newDiv.setAttribute("class", "yellow");
+            } else {
+                newDiv.setAttribute("class", "white");
+            }
+
+            document.getElementById("container").appendChild(newDiv.cloneNode(true));
+        }
+
+        var fDiv = document.createElement("div");
+        fDiv.setAttribute("class", "first-div");
+        document.getElementById("container").appendChild(fDiv.cloneNode(true));
+        for (i = 0; i < 29; i++) {
+            var newDiv = document.createElement("div");
+            if ((i == 0) || (i == 1) || (i == 5) || (i == 21) || (i == 22) || (i == 6) || (i == 2) || (i == 25) || (i == 26) || (i == 27)) {
+                newDiv.setAttribute("class", "black");
+            } else if ((i == 3) || (i == 4) || (i == 24) || (i == 23)) {
+                newDiv.setAttribute("class", "yellow");
+            } else {
+                newDiv.setAttribute("class", "white");
+            }
+
+            document.getElementById("container").appendChild(newDiv.cloneNode(true));
+        }
+
+        var fDiv = document.createElement("div");
+        fDiv.setAttribute("class", "first-div");
+        document.getElementById("container").appendChild(fDiv.cloneNode(true));
+        for (i = 0; i < 29; i++) {
+            var newDiv = document.createElement("div");
+            if ((i == 1) || (i == 2) || (i == 7) || (i == 20) || (i == 25) || (i == 26)) {
+                newDiv.setAttribute("class", "black");
+            } else if (i > 1 && i < 7 || (i > 20 && i < 26)) {
+                newDiv.setAttribute("class", "yellow");
+            } else {
+                newDiv.setAttribute("class", "white");
+            }
+
+            document.getElementById("container").appendChild(newDiv.cloneNode(true));
+        }
+
+        var fDiv = document.createElement("div");
+        fDiv.setAttribute("class", "first-div");
+        document.getElementById("container").appendChild(fDiv.cloneNode(true));
+        for (i = 0; i < 29; i++) {
+            var newDiv = document.createElement("div");
+            if ((i == 2) || (i == 1) || (i == 8) || (i == 9) || (i == 13) || (i == 14) || (i == 15) || (i == 12) || (i == 18) || (i == 19) || (i == 25) || (i == 26)) {
+                newDiv.setAttribute("class", "black");
+            } else if (i > 1 && i < 8 || (i > 19 && i < 26)) {
+                newDiv.setAttribute("class", "yellow");
+            } else {
+                newDiv.setAttribute("class", "white");
+            }
+
+            document.getElementById("container").appendChild(newDiv.cloneNode(true));
+        }
+
+
+        var fDiv = document.createElement("div");
+        fDiv.setAttribute("class", "first-div");
+        document.getElementById("container").appendChild(fDiv.cloneNode(true));
+        for (i = 0; i < 29; i++) {
+            var newDiv = document.createElement("div");
+            if ((i == 2) || (i == 10) || (i == 11) || (i == 17) || (i == 16) || (i == 25)) {
+                newDiv.setAttribute("class", "black");
+            } else if (i > 2 && i < 25) {
+                newDiv.setAttribute("class", "yellow");
+            } else {
+                newDiv.setAttribute("class", "white");
+            }
+
+            document.getElementById("container").appendChild(newDiv.cloneNode(true));
+        }
+
+        var fDiv = document.createElement("div");
+        fDiv.setAttribute("class", "first-div");
+        document.getElementById("container").appendChild(fDiv.cloneNode(true));
+        for (i = 0; i < 29; i++) {
+            var newDiv = document.createElement("div");
+            if ((i == 2) || (i == 25)) {
+                newDiv.setAttribute("class", "black");
+            } else if (i > 2 && i < 25) {
+                newDiv.setAttribute("class", "yellow");
+            } else {
+                newDiv.setAttribute("class", "white");
+            }
+
+            document.getElementById("container").appendChild(newDiv.cloneNode(true));
+        }
+
+        var fDiv = document.createElement("div");
+        fDiv.setAttribute("class", "first-div");
+        document.getElementById("container").appendChild(fDiv.cloneNode(true));
+        for (i = 0; i < 29; i++) {
+            var newDiv = document.createElement("div");
+            if ((i == 3) || (i == 24)) {
+                newDiv.setAttribute("class", "black");
+            } else if (i > 3 && i < 24) {
+                newDiv.setAttribute("class", "yellow");
+            } else {
+                newDiv.setAttribute("class", "white");
+            }
+
+            document.getElementById("container").appendChild(newDiv.cloneNode(true));
+        }
+
+        var fDiv = document.createElement("div");
+        fDiv.setAttribute("class", "first-div");
+        document.getElementById("container").appendChild(fDiv.cloneNode(true));
+        for (i = 0; i < 29; i++) {
+            var newDiv = document.createElement("div");
+            if ((i == 4) || (i == 6) || (i == 22) || (i == 24)) {
+                newDiv.setAttribute("class", "black");
+            } else if (i > 4 && i < 24) {
+                newDiv.setAttribute("class", "yellow");
+            } else {
+                newDiv.setAttribute("class", "white");
+            }
+
+            document.getElementById("container").appendChild(newDiv.cloneNode(true));
+        }
+
+        var fDiv = document.createElement("div");
+        fDiv.setAttribute("class", "first-div");
+        document.getElementById("container").appendChild(fDiv.cloneNode(true));
+        for (i = 0; i < 29; i++) {
+            var newDiv = document.createElement("div");
+            if ((i == 5) || (i == 23)) {
+                newDiv.setAttribute("class", "black");
+            } else if (i > 5 && i < 23) {
+                newDiv.setAttribute("class", "yellow");
+            } else if (i > 5 && i < 22) {
+                newDiv.setAttribute("class", "yellow");
+            } else {
+                newDiv.setAttribute("class", "white");
+            }
+
+            document.getElementById("container").appendChild(newDiv.cloneNode(true));
+        }
+
+        var fDiv = document.createElement("div");
+        fDiv.setAttribute("class", "first-div");
+        document.getElementById("container").appendChild(fDiv.cloneNode(true));
+        for (i = 0; i < 29; i++) {
+            var newDiv = document.createElement("div");
+            if ((i == 5) || (i == 22)) {
+                newDiv.setAttribute("class", "black");
+            } else if (i > 5 && i < 22) {
+                newDiv.setAttribute("class", "yellow");
+            } else {
+                newDiv.setAttribute("class", "white");
+            }
+
+            document.getElementById("container").appendChild(newDiv.cloneNode(true));
+        }
+
+        var fDiv = document.createElement("div");
+        fDiv.setAttribute("class", "first-div");
+        document.getElementById("container").appendChild(fDiv.cloneNode(true));
+        for (i = 0; i < 29; i++) {
+            var newDiv = document.createElement("div");
+            if ((i == 4) || (i == 23) || (i == 9) || (i == 8) || (i == 19) || (i == 18)) {
+                newDiv.setAttribute("class", "black");
+            } else if (i > 4 && i < 23) {
+                newDiv.setAttribute("class", "yellow");
+            } else {
+                newDiv.setAttribute("class", "white");
+            }
+
+            document.getElementById("container").appendChild(newDiv.cloneNode(true));
+        }
+
+        var fDiv = document.createElement("div");
+        fDiv.setAttribute("class", "first-div");
+        document.getElementById("container").appendChild(fDiv.cloneNode(true));
+        for (i = 0; i < 29; i++) {
+            var newDiv = document.createElement("div");
+            if ((i == 4) || (i == 23) || (i == 10) || (i == 9) || (i == 7) || (i == 18) || (i == 17) || (i == 20)) {
+                newDiv.setAttribute("class", "black");
+            } else if (i > 4 && i < 23 && i != 8 & i != 19) {
+                newDiv.setAttribute("class", "yellow");
+            } else {
+                newDiv.setAttribute("class", "white");
+            }
+
+            document.getElementById("container").appendChild(newDiv.cloneNode(true));
+        }
+
+        var fDiv = document.createElement("div");
+        fDiv.setAttribute("class", "first-div");
+        document.getElementById("container").appendChild(fDiv.cloneNode(true));
+        for (i = 0; i < 29; i++) {
+            var newDiv = document.createElement("div");
+            if ((i == 4) || (i == 23) || (i == 10) || (i == 9) || (i == 8) || (i == 7) || (i == 19) || (i == 18) || (i == 17) || (i == 20)) {
+                newDiv.setAttribute("class", "black");
+            } else if (i > 4 && i < 23) {
+                newDiv.setAttribute("class", "yellow");
+            } else {
+                newDiv.setAttribute("class", "white");
+            }
+
+            document.getElementById("container").appendChild(newDiv.cloneNode(true));
+        }
+
+        var fDiv = document.createElement("div");
+        fDiv.setAttribute("class", "first-div");
+        document.getElementById("container").appendChild(fDiv.cloneNode(true));
+        for (i = 0; i < 29; i++) {
+            var newDiv = document.createElement("div");
+            if ((i == 4) || (i == 13) || (i == 14) || (i == 9) || (i == 8) || (i == 18) || (i == 19) || (i == 23)) {
+                newDiv.setAttribute("class", "black");
+            } else if (i > 4 && i < 23) {
+                newDiv.setAttribute("class", "yellow");
+            } else {
+                newDiv.setAttribute("class", "white");
+            }
+
+            document.getElementById("container").appendChild(newDiv.cloneNode(true));
+        }
+
+        var fDiv = document.createElement("div");
+        fDiv.setAttribute("class", "first-div");
+        document.getElementById("container").appendChild(fDiv.cloneNode(true));
+        for (i = 0; i < 29; i++) {
+            var newDiv = document.createElement("div");
+            if ((i == 3) || (i == 24)) {
+                newDiv.setAttribute("class", "black");
+            } else if ((i == 6) || (i == 7) || (i == 20) || (i == 21)) {
+                newDiv.setAttribute("class", "red");
+            } else if (i > 3 && i < 24) {
+                newDiv.setAttribute("class", "yellow");
+            } else {
+                newDiv.setAttribute("class", "white");
+            }
+
+            document.getElementById("container").appendChild(newDiv.cloneNode(true));
+        }
+
+        var fDiv = document.createElement("div");
+        fDiv.setAttribute("class", "first-div");
+        document.getElementById("container").appendChild(fDiv.cloneNode(true));
+        for (i = 0; i < 29; i++) {
+            var newDiv = document.createElement("div");
+            if ((i == 3) || (i == 13) || (i == 14) || (i == 11) || (i == 16) || (i == 24)) {
+                newDiv.setAttribute("class", "black");
+            } else if ((i == 22) || (i == 19) || (i == 8) || (i == 5) || (i == 6) || (i == 7) || (i == 20) || (i == 21)) {
+                newDiv.setAttribute("class", "red");
+            } else if (i > 3 && i < 24) {
+                newDiv.setAttribute("class", "yellow");
+            } else {
+                newDiv.setAttribute("class", "white");
+            }
+
+            document.getElementById("container").appendChild(newDiv.cloneNode(true));
+        }
+
+        var fDiv = document.createElement("div");
+        fDiv.setAttribute("class", "first-div");
+        document.getElementById("container").appendChild(fDiv.cloneNode(true));
+        for (i = 0; i < 29; i++) {
+            var newDiv = document.createElement("div");
+            if ((i == 15) || (i == 12) || (i == 13) || (i == 14) || (i == 3) || (i == 24)) {
+                newDiv.setAttribute("class", "black");
+            } else if ((i == 22) || (i == 19) || (i == 8) || (i == 5) || (i == 6) || (i == 7) || (i == 20) || (i == 21)) {
+                newDiv.setAttribute("class", "red");
+            } else if (i > 3 && i < 24) {
+                newDiv.setAttribute("class", "yellow");
+            } else {
+                newDiv.setAttribute("class", "white");
+            }
+
+            document.getElementById("container").appendChild(newDiv.cloneNode(true));
+        }
+
+        var fDiv = document.createElement("div");
+        fDiv.setAttribute("class", "first-div");
+        document.getElementById("container").appendChild(fDiv.cloneNode(true));
+        for (i = 0; i < 29; i++) {
+            var newDiv = document.createElement("div");
+            if ((i == 4) || (i == 12) || (i == 15) || (i == 23)) {
+                newDiv.setAttribute("class", "black");
+            } else if ((i == 13) || (i == 14) || (i == 6) || (i == 7) || (i == 20) || (i == 21)) {
+                newDiv.setAttribute("class", "red");
+            } else if (i > 4 && i < 23) {
+                newDiv.setAttribute("class", "yellow");
+            } else {
+                newDiv.setAttribute("class", "white");
+            }
+
+            document.getElementById("container").appendChild(newDiv.cloneNode(true));
+        }
+
+        var fDiv = document.createElement("div");
+        fDiv.setAttribute("class", "first-div");
+        document.getElementById("container").appendChild(fDiv.cloneNode(true));
+        for (i = 0; i < 29; i++) {
+            var newDiv = document.createElement("div");
+            if ((i == 5) || (i == 12) || (i == 15) || (i == 22)) {
+                newDiv.setAttribute("class", "black");
+            } else if ((i == 13) || (i == 14)) {
+                newDiv.setAttribute("class", "red");
+            } else if (i > 5 && i < 22) {
+                newDiv.setAttribute("class", "yellow");
+            } else {
+                newDiv.setAttribute("class", "white");
+            }
+
+            document.getElementById("container").appendChild(newDiv.cloneNode(true));
+        }
+
+        var fDiv = document.createElement("div");
+        fDiv.setAttribute("class", "first-div");
+        document.getElementById("container").appendChild(fDiv.cloneNode(true));
+        for (i = 0; i < 29; i++) {
+            var newDiv = document.createElement("div");
+            if ((i == 6) || (i == 7) || (i == 13) || (i == 14) || (i == 20) || (i == 21)) {
+                newDiv.setAttribute("class", "black");
+            } else if (i > 7 && i < 20) {
+                newDiv.setAttribute("class", "yellow");
+            } else {
+                newDiv.setAttribute("class", "white");
+            }
+
+            document.getElementById("container").appendChild(newDiv.cloneNode(true));
+        }
+
+        var fDiv = document.createElement("div");
+        fDiv.setAttribute("class", "first-div");
+        document.getElementById("container").appendChild(fDiv.cloneNode(true));
+        for (i = 0; i < 29; i++) {
+            var newDiv = document.createElement("div");
+            if ((i == 8) || (i == 9) || (i == 10) || (i == 17) || (i == 18) || (i == 19)) {
+                newDiv.setAttribute("class", "black");
+            } else if (i > 10 && i < 17) {
+                newDiv.setAttribute("class", "yellow");
+            } else {
+                newDiv.setAttribute("class", "white");
+            }
+
+            document.getElementById("container").appendChild(newDiv.cloneNode(true));
+        }
+
+        var fDiv = document.createElement("div");
+        fDiv.setAttribute("class", "first-div");
+        document.getElementById("container").appendChild(fDiv.cloneNode(true));
+        for (i = 0; i < 29; i++) {
+            var newDiv = document.createElement("div");
+            if ((i == 11) || (i == 12) || (i == 13) || (i == 14) || (i == 15) || (i == 16)) {
+                newDiv.setAttribute("class", "black");
+            } else {
+                newDiv.setAttribute("class", "white");
+            }
+
+            document.getElementById("container").appendChild(newDiv.cloneNode(true));
+        }
+
+        var fDiv = document.createElement("div");
+        fDiv.setAttribute("class", "first-div");
+        document.getElementById("container").appendChild(fDiv.cloneNode(true));
+        for (i = 0; i < 29; i++) {
+            var newDiv = document.createElement("div");
+            newDiv.setAttribute("class", "white");
+            document.getElementById("container").appendChild(newDiv.cloneNode(true));
+        }
+
     </script>
-    
 
 </body>
+
 </html>
