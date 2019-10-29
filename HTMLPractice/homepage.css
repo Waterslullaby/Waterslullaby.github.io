@@ -1,0 +1,29 @@
+.content-card
+{
+    width:300px;
+    float:left;
+    clear:none;
+    background-color: #edf8ff;
+    transform:scale(1);
+    transition:scale 1s;
+    
+
+}
+
+.content-card:hover
+{
+    animation-name:Grow;
+    
+    animation-duration:1s;
+    animation-fill-mode:forwards;
+    animation-timing-function: ease;
+    
+}
+
+@keyframes Grow
+{
+    100%
+    {
+        transform:scale(1.1);
+    }
+}
