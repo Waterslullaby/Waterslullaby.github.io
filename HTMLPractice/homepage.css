@@ -1,29 +1,74 @@
 .content-card
 {
     width:300px;
+    height:300px;
     float:left;
     clear:none;
     background-color: #edf8ff;
-    transform:scale(1);
-    transition:scale 1s;
-    
+    box-shadow:0 1px 3px rgba(0,0,0,0.12),0 10px 10px rgba(0,0,0,0.24);
+    transition: all 1s ease-in-out;
 
+}
+
+.content-card img
+{
+    width:300px;
+    height:300px;
 }
 
 .content-card:hover
 {
-    animation-name:Grow;
+    box-shadow:0 14px 28px rgba(0,0,0,0.25),0 10px 10px rgba(0,0,0,0.22);
+    transform: scale(1.1);
     
-    animation-duration:1s;
-    animation-fill-mode:forwards;
-    animation-timing-function: ease;
+    
+}
+.content-text
+{
+    text-decoration:none;
+    text-decoration-style: none;
+}
+
+.content-wrapper
+{
+    width:90%;
+    height:90%;
+    margin:auto;
+    margin-top:5%;
+}
+
+header
+{
+    
+    font-family: 'Alice', serif;
+    font-size:75pt;
+    height:100vh;
+    
     
 }
 
-@keyframes Grow
+.hello-text
 {
-    100%
-    {
-        transform:scale(1.1);
-    }
+    position:relative;
+    left:100px;
+    animation-name:moveText;
+    animation-duration: 3s;
+    transition:left 3s ease-in-out;
+    animation-fill-mode: forwards;
+    
+    
 }
+
+@keyframes moveText
+{
+    
+    to
+    {
+        left:300px;
+    }
+    
+}
+
+
+
+
