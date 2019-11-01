@@ -1,19 +1,32 @@
+*
+{
+    overflow-x:hidden;
+    
+}
+.body
+{
+    font-family: 'Alice', serif;
+
+    
+}
 .content-card
 {
-    width:300px;
-    height:300px;
+    
+    width:30%;
+    height:30%;
     float:left;
     clear:none;
+    margin:1%;
     background-color: #edf8ff;
     box-shadow:0 1px 3px rgba(0,0,0,0.12),0 10px 10px rgba(0,0,0,0.24);
-    transition: all 1s ease-in-out;
+    transition: all 1s ease-in-out,margin 0s;
 
 }
 
 .content-card img
 {
-    width:300px;
-    height:300px;
+    width:100%;
+    height:100%;
 }
 
 .content-card:hover
@@ -31,10 +44,11 @@
 
 .content-wrapper
 {
-    width:90%;
-    height:90%;
-    margin:auto;
-    margin-top:5%;
+    width:100%;
+    height:100%;
+    z-index: 1;
+    position:relative;
+    top:100%;
 }
 
 header
@@ -44,31 +58,96 @@ header
     font-size:75pt;
     height:100vh;
     
-    
+    animation-name:shrinkHeader;
+    animation-delay: 20s;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
 }
 
 .hello-text
 {
     position:relative;
-    left:100px;
+    left:-100%;
     animation-name:moveText;
-    animation-duration: 3s;
-    transition:left 3s ease-in-out;
-    animation-fill-mode: forwards;
+    animation-duration: 9s;
+    transition:left top 3s ease;
+}
+.name-text
+{
+    position:relative;
+    left:-100%;
+    animation-name:moveText;
+    animation-duration: 9s;
+    animation-delay: 6s;
+    transition:left top 3s ease;
+}
+
+.welcome-text
+{
+    position:relative;
+    left:-100%;
+    animation-name:moveText;
+    animation-duration: 9s;
+    animation-delay: 12s;
+    transition:left top 3s ease;
+    
     
     
 }
+.main-container
+{
+overflow-y:scroll;
+    
+}
+
+
 
 @keyframes moveText
 {
     
-    to
+    25%
     {
-        left:300px;
+        left:25px;
+        top:0%;
     }
     
+    50%
+    {
+        left:25px;
+        top:0%;
+    }
+    
+    100%
+    {
+        top:-1000px;
+        left:25px;
+    }
 }
 
+@keyframes shrinkHeader
+{
+    100%
+    {
+        height:0px;
+        width:0px;
 
+    }
+}
+@keyframes scroll
+{
+    
+    100%
+    {
+      overflow-y:scroll;
+    }
+}
 
+/*position:absolute;
+    top:0%;
+    animation-name: moveContent;
+    animation-duration: 1s;
+    transition:top 1s ease;
+    animation-fill-mode: forwards;
+    animation-delay:15s;
+    z-index: 1;*/
 
