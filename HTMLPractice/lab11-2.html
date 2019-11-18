@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <style>
+        #tweet-container {
+            display: flex;
+            max-width: 600px;
+            width: 100%;
+            height: 100%;
+            margin: auto;
+            font-family: 'Roboto', sans-serif;
+            flex-direction: column;
+            align-content: flex-start;
+            border: 1px solid lightgrey;
+        }
+
+        #tweet-profile {
+            width: 97%;
+            display: flex;
+            flex-direction: row;
+            padding: 10px;
+            height: auto;
+
+
+        }
+
+
+
+        #profile-info {
+            flex-direction: column;
+            margin-left: 15px;
+            width: 100%;
+
+        }
+
+        #profile-name {
+            font-size: 20pt;
+        }
+
+        #profile-name img {
+            width: 18pt;
+            height: 18pt;
+        }
+
+        #profile-hash {
+            font-size: 18pt;
+            color: grey;
+        }
+
+        #down-arrow {
+            display: flex;
+            width: 100%;
+            height: 14pt;
+            flex-direction: row;
+            justify-content: flex-end;
+            align-items: flex-start;
+
+        }
+
+        #down-arrow img {
+            height: inherit;
+        }
+
+        #tweet-text {
+            display: flex;
+            margin: 10px;
+            font-size: 30pt;
+        }
+        
+        #tweet-pic
+        {
+            padding:10px;
+        }
+        #tweet-pic img
+        {
+            width:100%;
+            border-radius: 5%;
+        }
+        #tweet-meta-info
+        {
+            margin-left:10px;
+            margin-right: 10px;
+            border-bottom: 1px solid lightgrey;
+            padding-bottom: 15px;
+        }
+        #icons
+        {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+            height:50px;
+        }
+        #icons img
+        {
+            height:50%;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div id="tweet-container">
+        <div id="tweet-profile">
+            <img src="../Images/tweet-profile-pic.PNG" style="width:100px;height: 100px;">
+
+            <div id="profile-info">
+                <div id="down-arrow">
+
+                    <img src="../Images/down-arrow.svg">
+
+                </div>
+                <div id="profile-name">
+
+                    AUDL
+                    <img src="../Images/verified.png">
+
+                </div>
+
+                <div id="profile-hash">
+
+                    @theAUDL
+
+                </div>
+            </div>
+
+
+
+        </div>
+        <div id="tweet-text">
+            Them: Not a sport<br>
+            Us:
+        </div>
+        <div id="tweet-pic">
+            <img src="../Images/tweet-pic.jpg">
+        </div>
+        
+        <div id="tweet-meta-info">
+            8:41 AM &#8226; Nov 3, 2019 &#8226; <span style="color:deepskyblue">Twitter Web App</span> 
+        </div>
+        
+        <div id="tweet-meta-info">
+        <strong>32</strong> Retweets     <strong>249</strong> Likes
+        </div>
+        
+        <div id="icons">
+            <img src="../Images/reply.PNG">
+            <img src="../Images/retweet.PNG">
+            <img src="../Images/like.PNG">
+            <img src="../Images/msg.PNG">
+        </div>
+    </div>
+</body>
+
+</html>
