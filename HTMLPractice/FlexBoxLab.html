@@ -6,42 +6,175 @@
     <title></title>
 
     <style>
-        
+        body
+        {
+            margin: 0%;
+        }
         .cBox
         {
-            width: 16%;
-            min-width: 100px;
-            height: 500px;
-            padding:12px;
             
+            margin:6px;
+            display:flex;
+            background-size:contain;
+            min-width: 154px;
+            min-height: 280px;
+            max-height: 500px;
+            width: calc(90% * (1/5));
+            height:25vw;
+            background-repeat: no-repeat;
+            flex-direction: column;
+            justify-content:center; 
+            background-position: 70.3646%;
+            position:relative;
         }
         
         .name
         {
-            width:100px;
-            height:100px;
-            font-size: 15pt;
+            width:100%;
+            height:25%;
+            font-size: 14pt;
             color: #cf9229;
-            text-align: center;
+            display:flex;
+            flex-direction: column;
+            align-items:center;
+            justify-content: center;
+            
+            position:absolute;
+            bottom:0%;
+            background:rgba(0,0,0,.8);
+            border-top:#cf9229 1px solid;
+        }
+        img
+        {
+            height: inherit;
+            width:inherit;
+        }
+        
+        .icon
+        {
+            height: 35px;
+            width:35px;
+            
         }
         
         #champs
         {
-            margin-left: 10%;
-            margin-right: 10%;
+            margin-top:4%;
+            margin-left: auto;
+            margin-right: auto;
             display:flex;
             flex-direction:row;
             justify-content: center;
             align-items: center;
             flex-wrap:wrap;
+            min-width:850px;
+            max-width: 1360px;
+            align-self: center;
+            height: 100%;
         }
         body
         {
-            background:black;
+                   background:black;
+            
+        }
+        .topBar
+        {
+            display:flex;
+            flex-direction: row;
+            align-items: center;
+            height: 40px;
+            width: 100%;
+            padding-left: 8px;
+            padding-top:8px;
+            border-bottom: #262626 solid 2px;
+            background:#121212;
+            overflow:visible;
+            
+        }
+        
+        .searchBar
+        {
+            position:sticky;
+            background:#121212;
+            height:85px;
+            width:100%;
+            z-index: 10;
+            top:0;
+        }
+        
+        .topBarTitle
+        {
+            color:white;
+            margin:37.5%;
+        }
+        .links
+        {
+            width:92%;
+            height:100px;
+            display:flex;
+            flex-direction:row;
+            align-items: center;
+            justify-content: space-around;
+            color: #8f6e40;
+            font-size: 11pt;
+            margin-left:4%;
+            
+        }
+        
+        @keyframes champHover
+        {
+            height:20%;
+            
+        }
+        footer
+        {
+            margin-top:100px;
+            border-top: #a68d62 solid 1px;
+            padding-bottom: 100px;
+        }
+        .trademark
+        {
+            display:flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width:100%;
+            margin:auto;
+            
+            padding-bottom: 10px;
+            text-align: center;
+            
+        }
+        .trademark img
+        {
+            width: 20%;
+        }
+        .copyright
+        {
+            color: #8f6e40;
+            font-size: 10pt;
+            width:65%;
         }
     
+        .rating
+        {
+            display:flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items:center;
+            height:130px;
+        }
+        .rating div
+        {
+            display:flex;
+            flex-direction:column;
+            justify-content: space-around;
+            color:white;
+            font-size: 12.5pt;
+
+        }
     </style>
-    
+        
     </head>
 
 <body>
@@ -50,36 +183,77 @@
     
     <nav class = "topBar">
     
-        <img href ="https://cdn.leagueoflegends.com/riotbar/prod/1.6.698/images/navigation/icon-game-lol.png">
-        <!-- I might as well use the image links riot's using ._. -->
+        <img class ="icon" src="../Images/LoL-icon.png">
+        <img class ="icon" src="../Images/LoL-Sidebar-Icon.PNG">
+        <div class="topBarTitle">UNIVERSE</div>
     </nav>
+    <div class ="searchBar"></div>
     
     <section id="champs">
     
         <script>
+            
         window.onload = addChamps;
        
         function addChamps()
         {
-            var champArray =["Aatrox", "Ahri", "Akali", "Alistar", "Amumu","Anivia", "Annie","Ashe", "Aurelion Sol"];
+            var champArray =["Aatrox", "Ahri", "Akali", "Alistar", "Amumu","Anivia", "Annie","Aphelios","Ashe", "Aurelion Sol","Azir","Bard","Blitzcrank"];
             
+            var alignmentArray = ["RUNETERRA","IONIA","IONIA","RUNETERRA","SHURIMA","FRELJORD","RUNETERRA","TARGON","FRELJORD","RUNETERRA","SHURIMA","RUNETERA","ZAUN"];
             var imgArray = [];
-
+            
             for(i= 0; i < champArray.length; i++)
                 {
                     
                     
+                   
+                    var champBox = document.createElement("div")
+                    champBox.className ="cBox";
+                    
+                
+                   document.getElementById("champs").appendChild(champBox);
+                
+                    var nameElement = document.createElement("div");
+                    nameElement.className = "name";
+                    
+                    nameElement.appendChild(document.createTextNode("" + champArray[i]));
+                    
+                    var alignmentContent = document.createElement("span");
+                    
+                    alignmentContent.appendChild(document.createTextNode("" + alignmentArray[i]));
+                    alignmentContent.style.fontSize="9pt";
+                    nameElement.appendChild(alignmentContent);
+                    nameElement.style.textAlign = "center";
+                
+                    nameElement.style.margin = "auto";
+                    champBox.appendChild(nameElement);
+                   champBox.style.backgroundImage = "url('../Images/LoLChampions/champ"+i+".jpg')";
+                
+                  /*  var imageContent = document.createElement("img");
+                    if(i < 5)
+                    {
+                        imageContent.src = "../Images/LoLChampions/champ"+i+".jpg";
+                        imageContent.style.height = "100%";
+                        imageContent.style.width = "100%";
+                        imageContent.style.objectFit = "cover";
+                       imageContent.style.objectPosition = "top"; champBox.appendChild(imageContent);
+                        
+                    }
+
                     var nameElement = document.createElement("div");
                     nameElement.className = "name";
                     var nameContent = document.createTextNode(champArray[i]);
                     nameElement.appendChild(nameContent);
-                    var champBox = document.createElement("div")
-                    champBox.className ="cBox";
+                    
+                    nameElement.style.textAlign = "center";
+                
+                    nameElement.style.margin = "auto";
                     champBox.appendChild(nameElement);
-                    
-                   document.getElementById("champs").appendChild(champBox);
-                    
+                    -->
                 }
+                */
+                
+        }
         }
     </script>
         
@@ -88,14 +262,51 @@
     <footer>
 
         <div class ="links">
-        
+            <div>ABOUT LEAGUE OF LEGENDS
+            </div>
+            <div>PREPAID CARDS
+            </div>
+            <div>HELP US IMPROVE
+            </div>
+            <div>SERVICE STATUS
+            </div>
+            <div>SUPPORT
+            </div>
+            <div>ESPORTS PRO SITE
+            </div>
         </div>
     
         <div class= "trademark">
-        
+        <img src="../Images/RiotLogo.PNG">
+            <div class = "copyright">@ 2019 Riot Games, Inc. All rights reserved. Riot Games, League of Legends and PvP.net are trademarks, service marks, or registered trademarks of Riot Games, Inc.
+            <br><br>
+                <span style= color:red;>UPDATED</span> Private Policy    Terms Of Use
+        </div>
         </div>
         
-        <div class = "rating"> </div>
+        <div class = "rating"> 
+        <img src="../Images/TeenRating.PNG">
+            <div>
+            <div>
+
+                Blood<br>
+            </div>
+            <div>
+                Fantasy Violence<br>
+            </div>
+            <div>    
+                Mild Suggestive </div>
+            <div>
+                Themes<br>
+            </div>
+            <div>
+                Use of Alcohol and Tobacco<br>
+            </div>
+            <div>
+                Online Interactions Not Rated by the ESRB
+            </div>
+                </div>
+        </div>
         
     </footer>
 </body>
