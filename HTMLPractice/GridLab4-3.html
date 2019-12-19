@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    
+    <style>
+        
+        .dark
+        {
+            background:black;
+        }
+        .square
+        {
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+        }
+        
+        body
+        {
+            margin:0;
+            padding: 0;
+            background-color: #525252;
+        }
+        
+        .board
+        {
+            margin: auto;
+            width:900px;
+            height:900px;
+            background-image: linear-gradient(to top, #3f51b1 0%, #5a55ae 13%, #7b5fac 25%, #8f6aae 38%, #a86aa4 50%, #cc6b8e 62%, #f18271 75%, #f3a469 87%, #f7c978 100%);
+            
+            display:grid;
+            grid-template-rows: repeat(8,1fr);
+            grid-template-columns: repeat(8,1fr);
+        }
+        
+        .l-pawn
+        {
+            background-image: url("../Images/ChessPieces/l-pawn.svg");
+        }
+        
+        .l-knight
+        {
+            background-image: url("../Images/ChessPieces/l-knight.svg");
+        }
+        
+        .l-bishop
+        {
+            background-image: url("../Images/ChessPieces/l-bishop.svg");
+        }
+        
+        .l-queen
+        {
+            background-image: url("../Images/ChessPieces/l-queen.svg");
+        }
+        
+        .l-king
+        {
+            background-image: url("../Images/ChessPieces/l-king.svg");
+        }
+        
+        .l-rook
+        {
+            background-image: url("../Images/ChessPieces/l-rook.svg");
+        }
+        
+        .d-pawn
+        {
+            background-image: url("../Images/ChessPieces/d-pawn.svg");
+        }
+        
+        .d-knight
+        {
+            background-image: url("../Images/ChessPieces/d-knight.svg");
+        }
+        
+        .d-bishop
+        {
+            background-image: url("../Images/ChessPieces/d-bishop.svg");
+        }
+        
+        .d-queen
+        {
+            background-image: url("../Images/ChessPieces/d-queen.svg");
+        }
+        
+        .d-king
+        {
+            background-image: url("../Images/ChessPieces/d-king.svg");
+        }
+        
+        .d-rook
+        {
+            background-image: url("../Images/ChessPieces/d-rook.svg");
+        }
+    
+    </style>
+    
+</head>
+
+<body>
+    <section class= "board">
+    
+        <!-- 1 -->
+        
+        <script>
+            let row1 = new Array("rook","knight","bishop","king","queen","bishop","knight","rook");
+            let row2 = new Array("pawn");
+            for(var k = 1; k <= 8; k++)
+                {
+                for(var i = 0; i < 8; i++)
+                    {
+                        var box = document.createElement("div");
+                        if((i % 2) == ((k % 2)))
+                            box.className = "square";
+                        else
+                            box.className = "square dark";
+                        
+                        if(k == 1)
+                            {
+                                box.className = box.className + " l-" + row1[i];
+                            }
+                        else if(k == 2)    
+                            {
+                            
+                                box.className = box.className + " l-" + row2[0];
+                            }
+                        else if(k == 7)
+                            {
+                                box.className = box.className + " d-" + row2[0];
+                            }
+                        else if(k == 8)
+                            {
+                                box.className = box.className + " d-" + row1[7-i];
+                            }
+                            
+                        document.getElementsByClassName("board")[0].appendChild(box);
+                    
+                    }
+                }
+        </script>
+        
+    </section>
+</body>
+</html>

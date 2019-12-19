@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    
+    <style>
+    
+        body
+        {
+            margin:0;
+            padding:0;
+            width:100%;
+            margin:auto;
+        }
+        
+        img
+        {
+            width:100%;
+            height:100%;
+        }
+        
+        .item
+        {
+            width:100%;
+            height:100%;
+        }
+        
+        .container
+        {
+            background-color:whitesmoke;
+            display:grid;
+            grid-template-columns: repeat(auto-fill,minmax(280px, 1fr));
+            grid-gap:2px;
+            padding:30px 75px;
+            border-top: 2px solid black;
+        }
+        
+
+    </style>
+    
+    <script>
+            function createItemDivs(x="")   
+            {
+                for(var i = 1; i<=27; i++)
+                {
+                    var picDiv = document.createElement("div");
+                
+                    picDiv.className = "item";
+                    
+                      var pic = document.createElement("img");
+                    
+                     pic.src = "../Images/Spices/spice-"+i+".jpg";
+                    
+                     picDiv.appendChild(pic);
+                    
+                     document.getElementsByClassName("container"+x)[0].appendChild(picDiv);
+                    
+                    
+                }
+            }
+        
+        </script>
+    
+</head>
+
+<body>
+    <h1> Responsive Spice Grid </h1>
+    <section class = "container">
+    
+        <script>createItemDivs();</script>
+    
+    </section>
+    
+</body>
+</html>

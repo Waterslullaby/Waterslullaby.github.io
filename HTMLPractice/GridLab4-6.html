@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    
+    <style>
+    
+        *
+        {
+            margin:0;
+            padding:0;
+        }
+        
+        #calender-grid
+        {
+            font-family:"Lilita One", cursive;
+            width:100%;
+            display: grid;
+            grid-template-columns: repeat(7,1fr);
+            grid-template-rows: repeat(6,250px);
+            grid-gap:1px;
+            grid-template-areas:"m m m m m m d1"
+                                "d2 d3 d4 d5 d6 d7 d8"
+                                "d9 d10 d11 d12 d13 d14 d15"
+                                "d16 d17 d18 d19 d20 d21 d22"
+                                "d23 d24 d25 d26 d27 d28 d29"
+                                "d30 d31 . . . . .";
+        }
+        
+        .month-name
+        {
+            grid-area: m;
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            font-size:75px;
+            color: rgba(255,255,255,0.6);
+            background-color:#db7a7a;
+        }
+        
+        .day-box
+        {
+            display:flex;
+            justify-content: space-between;
+            position:relative;
+            z-index: -10;
+        }
+        
+        .day-box span
+        {
+            margin:15px;
+            font-size: 25px;
+            font-weight: bolder;
+            text-transform: uppercase;
+        }
+        
+        .red
+        {
+            background-color: #db7a7a;
+        }
+        
+        .orange
+        {
+            background-color:#db917a;
+        }
+        
+        .yellow
+        {
+            background-color:#dbd47a;
+        }
+        
+        .green
+        {   
+            background-color: #bedb7a;
+        }
+        
+        .blue
+        {
+            background-color: #7adbb8;
+        }
+        
+        .dark-blue
+        {
+            background-color: #7ab6db;
+        }
+    </style>
+    
+</head>
+
+<body>
+    <section id="calender-grid">
+        <div class = "month-name">DECEMBER</div>
+        <script>
+            let days = new Array(1,7,7,7,7,2);
+            let colors = new Array("red","orange","yellow","green","blue","dark-blue");
+            let dayNames = new Array("Mon","Tue","Wed","Thu","Fri","Sat","Sun");
+            var n = 1;
+            var w = 0;
+            for(var i = 0;i < colors.length; i++)
+                {
+                    for(var d = 0; d < days[i];d++)
+                    {
+                        var row = document.createElement("div");
+                        row.className = "day-box " + colors[i]; 
+                        row.style.gridArea= "d"+n;
+                        var sp1 = document.createElement("span");
+                        sp1.textContent = ""+n;
+                        
+                        var sp2 = document.createElement("span");
+                        sp2.textContent = dayNames[((n+5) % 7)];  
+                        row.appendChild(sp1);
+                        row.appendChild(sp2)
+                        document.getElementById("calender-grid").appendChild(row);
+                        n++;   
+                    }
+                        
+                }
+        </script>
+    </section>
+    
+</body>
+</html>

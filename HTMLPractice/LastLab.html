@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Gelasio&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Serif&display=swap" rel="stylesheet">
+    <title>The Man with the Steel Cane - Universe Of League of Legends</title>
+</head>
+    <style>
+        *
+        {
+            color:rgb(240, 230, 210);   
+            
+            font-family: 'Noto Serif', serif;
+        }
+        .caps
+        {
+            text-transform: uppercase;
+            display:block;
+        }
+        
+        .yellowFont
+        {
+            color:#c8aa6e;
+        }
+        
+        .small
+        {
+            font-weight: bold;
+            font-size: 12px;
+        }
+        .big
+        {
+            font-size:15pt;
+            font-weight:800;
+            letter-spacing: 1.5px;
+            
+        }
+
+        body
+        {
+            background:rgba(22,22,22,1);
+            margin:auto;
+        }
+        
+        .one
+        {
+            font-size: 12.25pt;
+        }
+        
+        .all
+        {
+            margin:auto;
+            padding: 10px;
+            max-width:620px;
+            text-align: left;
+            letter-spacing:-.55px;
+            text-shadow:0 0 2px rgb(240, 230, 210,.2);
+            line-height: 28px;
+            
+        }
+        .title
+        {
+            text-align: center;
+            text-shadow:0 0 2px rgb(240, 230, 210,0);
+        }
+        
+        .side
+        {   
+            display:inline-flex;
+            flex-direction: column;
+            position:sticky;
+            top:0;
+            padding:45px;
+        }
+        
+        .prog
+        {
+            margin-top:20px;
+            width:275px;
+            height:2px;
+            background: rgba(91, 90, 86, 0.3);
+        }
+        
+        .progBar
+        {
+            height:2px;
+            background:#c8aa6e;
+            width:0%;
+        }
+        .topBar
+        {
+            display:flex;
+            flex-direction: row;
+            justify-content: space-between;
+            height: 40px;
+            width: 100%;
+            margin:auto;
+            padding-left: 8px;
+            padding-top:8px;
+            border-bottom: #262626 solid 2px;
+            background:#121212;
+            overflow:visible;
+        }
+        .innerTopBar
+        {
+            display:inline-flex;
+            flex-direction: row;
+            
+        }
+        
+        .innerTopBar div
+        {
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+        .icon
+        {
+            height: 35px;
+            width: 35px;
+            
+        }
+        
+        footer
+        {
+            margin-top:100px;
+            border-top: #a68d62 solid 1px;
+            padding-bottom: 100px;
+            background:black;
+        }
+        .trademark
+        {
+            display:flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width:100%;
+            margin:auto;
+            
+            padding-bottom: 10px;
+            text-align: center;
+            
+        }
+        .trademark img
+        {
+            width: 20%;
+        }
+        .copyright
+        {
+            color: #8f6e40;
+            font-size: 10pt;
+            width:65%;
+        }
+    
+        .rating
+        {
+            display:flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items:center;
+            height:130px;
+        }
+        .rating div
+        {
+            display:flex;
+            flex-direction:column;
+            justify-content: space-around;
+            color:white;
+            font-size: 10pt;
+
+        }
+        .rating img
+        {
+            width:75px;
+        }
+        .links
+        {
+            width:92%;
+            height:100px;
+            display:flex;
+            flex-direction:row;
+            align-items: center;
+            justify-content: space-around;
+            font-size: 11pt;
+            margin-left:4%;
+            
+            
+        }
+        
+        .links div
+        {
+            color:#8f6e40;
+        }
+        
+        .container
+        {
+            position:static;
+            top:0;
+        }
+    </style>
+    <script>  
+        window.onscroll = function() {progressBar()};
+
+        function progressBar() {
+            var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            var scrolled = (winScroll / height) * 275;
+        document.getElementsByClassName("progBar")[0].style.width = scrolled + "px";
+            
+            if(scrolled == 0)
+                {
+                    document.getElementsByClassName("side")[0].style.display = "none";
+                }
+            else
+                {
+                    checkSideBar();
+                }
+        }
+        
+        window.addEventListener("resize", checkSideBar);
+        
+        function checkSideBar()
+        {
+            if(document.body.clientWidth < 1265)
+                {
+                    document.getElementsByClassName("side")[0].style.display = "none";
+                }
+            else
+                {
+                    document.getElementsByClassName("side")[0].style.display = "flex";
+                    
+                }
+            
+            
+        }
+        
+    </script> 
+<body>
+    <nav class = "topBar">
+    
+        <img class ="icon" src="../Images/LoL-icon.png">
+        <div class = "innerTopBar caps" >
+            <div class = "big caps">Universe</div>
+            <div class = "yellowFont">Champions</div>
+            <div class = "yellowFont">Regions</div>
+            <div class = "yellowFont">Comics</div>
+            <div class = "yellowFont">Alt Universe</div>
+
+            <div class = "yellowFont">Map</div>
+            <div class = "yellowFont">Explore</div>
+            <div class = "yellowFont">Search</div>
+        </div>
+            
+        <div class = "innerTopBar">    
+            <div><div class = "yellowFont">Login</div></div>
+        </div>
+        
+    </nav>
+    
+    <sidebar class = "side">
+        
+        <div class = "small caps">Short Story</div>
+        <div class = "big caps">The man with the<br>steel cane</div>
+        <div class = "small yellowFont caps">by odin austin shafer</div>
+        
+        <div class ="prog"><div class ="progBar"></div></div>
+        
+    </sidebar>
+    <div class = container>
+    <header class = "caps big title" style="margin-top:100px;">The man with the steel cane</header>
+    <subheader class = "caps small title yellowFont">By Odin Austin Shafer</subheader>
+    <section class = "all">
+        <br><br><br><br>
+        <div class = title><strong>One.</strong></div>
+        <section class = "one">
+                
+            The gun in his hand was simply a tool—but a perfectly crafted one. Gold type was inlaid into the blackish-green metal. It spelled the smith’s name: this detail spoke of its creator’s pride and confidence. It was not a Piltovan weapon—those gaudy things that attempted to function with the minuscule amounts of magic available in those lands. This gun was made by a true forge master. Magic pulsed from its bronze, Ionian heart.<br>
+            <p>He wiped the gun's stock a fourth time. He couldn't be sure it was clean until he wiped it down four times. Didn't matter that he hadn't used it. Didn't matter that he was only going to stow it under the bag under the bed. He couldn't put it away until he was sure it was clean, and he couldn't be sure it was clean until he had wiped it down four times. It was getting clean though. Four times makes it clean.</p>
+            <p>It was clean, and it was wonderful. His new patrons had been generous. But did the finest painters not deserve the finest brushes?</p>
+            <p>The scale and precision of the new device made his previous work with blades seem insignificant by comparison. Understanding firearm mechanics had taken him weeks of study, but evolving his ki techniques from blades had taken months.</p>
+            <p>The gun held four shots. Each bullet had been infused with magical energy. Each bullet was as perfect as a Lassilan monk’s blade. Each bullet was the paint from which his art would flow. Each bullet was a masterpiece. It didn’t just cut apart the body. It rearranged it.</p>
+            <p>The rehearsal at the mill town had already shown the gun’s potential. And his new employers had been pleased with the work’s reception.</p>
+            <p>He had finished polishing it, but with the gun in his right hand, the temptation was too great. He knew he shouldn’t, but he unpacked the black, eel-skin bodysuit. He drew the fingertips of his left hand across the slick surface of the clothes. The feel of the skin’s oily surface quickened his breath. He picked up the tight, leather mask, then—unable to help himself—slid it over his face. It covered his right eye and mouth. It constricted his breathing and removed his depth perception…</p>
+            <p>Delightful.</p>
+            <p>He was putting on the shoulder armor when the bells he’d hidden on the steps leading up to his room sounded. He quickly folded up the weapon and removed the mask.</p>
+            <p>“Hello?” the maid asked through the door. The lilt in her voice hinted to an upbringing far south of this town.</p>
+            <p>“You did what I asked?” he said.</p>
+            <p>“Yes, sir. A white lantern every four yards. A red lantern every sixteen.”</p>
+            <p>“Then I can begin,” Khada Jhin said as he swung open the door to his room.</p>
+            <p>The woman’s eyes widened as he exited his room. Jhin was well aware of how he looked. Normally, it elicited pangs of self-conscious loathing, but today was a performance day.</p>
+        </section>
+        
+    </section>
+    </div>
+    <footer>
+
+        <div class ="links">
+            <div>ABOUT LEAGUE OF LEGENDS
+            </div>
+            <div>PREPAID CARDS
+            </div>
+            <div>HELP US IMPROVE
+            </div>
+            <div>SERVICE STATUS
+            </div>
+            <div>SUPPORT
+            </div>
+            <div>ESPORTS PRO SITE
+            </div>
+        </div>
+    
+        <div class= "trademark">
+        <img src="../Images/RiotLogo.PNG">
+            <div class = "copyright">@ 2019 Riot Games, Inc. All rights reserved. Riot Games, League of Legends and PvP.net are trademarks, service marks, or registered trademarks of Riot Games, Inc.
+            <br><br>
+                <span style= color:red;>UPDATED</span> Private Policy    Terms Of Use
+        </div>
+        </div>
+        
+        <div class = "rating"> 
+        <img src="../Images/TeenRating.PNG">
+            <div>
+            <div>
+
+                Blood<br>
+            </div>
+            <div>
+                Fantasy Violence<br>
+            </div>
+            <div>    
+                Mild Suggestive </div>
+            <div>
+                Themes<br>
+            </div>
+            <div>
+                Use of Alcohol and Tobacco<br>
+            </div>
+            <div>
+                Online Interactions Not Rated by the ESRB
+            </div>
+                </div>
+        </div>
+        
+    </footer>
+</body>
+</html>
